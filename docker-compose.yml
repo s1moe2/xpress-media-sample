@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+  media_app:
+    build: .
+    container_name: media-app
+    ports:
+      - 5000:5000
+    volumes:
+      - ./media:/usr/src/app/media

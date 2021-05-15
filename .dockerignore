@@ -1,0 +1,6 @@
+media
+node_modules
+.DS_Store
+sample.png
+Dockerfile
+docker-compose.yml
