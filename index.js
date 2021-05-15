@@ -29,6 +29,7 @@ app.post('/avatar', fileParser, async (req, res, next) => {
         const newPath = path.join(__dirname, `media/${fileName}`)
 
         await fs.copyFile(file.path, newPath)
+        await fs.unlink(file.path)
 
         return res.status(200).send({ url: `${API_URL}/media/${fileName}` })
     } catch (err) {
